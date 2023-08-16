@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Blog Admin 2023</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="../../AdminDosyalar/bootstrap-3.3.7/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../AdminDosyalar/StyleSheet2.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Paneli</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="/Admin/About/About.aspx">
+                        <i class="glyphicon glyphicon-user"></i>
+                        Hakkımda
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/Experience/Experience.aspx">
+                        <i class="glyphicon glyphicon-signal"></i>
+                        Deneyimler
+                    </a>
+                    <a href="/Admin/Education/Education.aspx">
+                        <i class="glyphicon glyphicon-education"></i>
+                        Eğitim
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/Ability/Ability.aspx">
+                        <i class="glyphicon glyphicon-music"></i>
+                        Yetenekler
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/Hobby/Hobby.aspx">
+                        <i class="glyphicon glyphicon-play"></i>
+                        Hobiler
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/Award/Award.aspx">
+                        <i class="glyphicon glyphicon-paperclip"></i>
+                        Ödüller
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/Certificate/Certificate.aspx">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                        Sertifikalar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    
+    <script src="../../AdminDosyalar/jquery-1.12.0.min.js"></script>
+    <script src="../../AdminDosyalar/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
